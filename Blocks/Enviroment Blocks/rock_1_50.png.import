@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/rock_1_50.png-ffeab8cb325513c49daaa1c1b5d91444.stex"
+
+[deps]
+
+source_file="res://Blocks/Enviroment Blocks/rock_1_50.png"
+source_md5="2c641e19685a8ace8af09cad100e91f1"
+
+dest_files=[ "res://.import/rock_1_50.png-ffeab8cb325513c49daaa1c1b5d91444.stex" ]
+dest_md5="c23fc617785e8840d3bb99e1398bb501"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

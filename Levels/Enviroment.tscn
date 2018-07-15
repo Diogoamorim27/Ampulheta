@@ -1,0 +1,512 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Blocks/Enviroment Blocks/EnviromentBlock.tscn" type="PackedScene" id=1]
+
+
+
+
+[node name="Enviroment" type="Node2D" index="0"]
+
+editor/display_folded = true
+
+[node name="BlocoAmbiente" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1056 )
+
+[node name="BlocoAmbiente67" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -800 )
+
+[node name="BlocoAmbiente39" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2592 )
+
+[node name="BlocoAmbiente99" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2592 )
+
+[node name="BlocoAmbiente101" parent="." index="4" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 736 )
+
+[node name="BlocoAmbiente109" parent="." index="5" instance=ExtResource( 1 )]
+
+position = Vector2( 480, 736 )
+
+[node name="BlocoAmbiente105" parent="." index="6" instance=ExtResource( 1 )]
+
+position = Vector2( 736, 736 )
+
+[node name="BlocoAmbiente114" parent="." index="7" instance=ExtResource( 1 )]
+
+position = Vector2( 224, 736 )
+
+[node name="BlocoAmbiente118" parent="." index="8" instance=ExtResource( 1 )]
+
+position = Vector2( 224, 416 )
+
+[node name="BlocoAmbiente90" parent="." index="9" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2336 )
+
+[node name="BlocoAmbiente23" parent="." index="10" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -288 )
+
+[node name="BlocoAmbiente76" parent="." index="11" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -32 )
+
+[node name="BlocoAmbiente47" parent="." index="12" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1824 )
+
+[node name="BlocoAmbiente63" parent="." index="13" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1568 )
+
+[node name="BlocoAmbiente11" parent="." index="14" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -672 )
+
+[node name="BlocoAmbiente56" parent="." index="15" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -416 )
+
+[node name="BlocoAmbiente31" parent="." index="16" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2208 )
+
+[node name="BlocoAmbiente82" parent="." index="17" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1952 )
+
+[node name="BlocoAmbiente18" parent="." index="18" instance=ExtResource( 1 )]
+
+position = Vector2( 288, 96 )
+
+[node name="BlocoAmbiente71" parent="." index="19" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 352 )
+
+[node name="BlocoAmbiente42" parent="." index="20" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1440 )
+
+[node name="BlocoAmbiente93" parent="." index="21" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1184 )
+
+[node name="BlocoAmbiente3" parent="." index="22" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -928 )
+
+[node name="BlocoAmbiente66" parent="." index="23" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -672 )
+
+[node name="BlocoAmbiente38" parent="." index="24" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2464 )
+
+[node name="BlocoAmbiente98" parent="." index="25" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2464 )
+
+[node name="BlocoAmbiente102" parent="." index="26" instance=ExtResource( 1 )]
+
+position = Vector2( 864, 736 )
+
+[node name="BlocoAmbiente110" parent="." index="27" instance=ExtResource( 1 )]
+
+position = Vector2( 352, 736 )
+
+[node name="BlocoAmbiente106" parent="." index="28" instance=ExtResource( 1 )]
+
+position = Vector2( 608, 736 )
+
+[node name="BlocoAmbiente116" parent="." index="29" instance=ExtResource( 1 )]
+
+position = Vector2( 96, 736 )
+
+[node name="BlocoAmbiente120" parent="." index="30" instance=ExtResource( 1 )]
+
+position = Vector2( 96, 416 )
+
+[node name="BlocoAmbiente89" parent="." index="31" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2208 )
+
+[node name="BlocoAmbiente22" parent="." index="32" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -160 )
+
+[node name="BlocoAmbiente75" parent="." index="33" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 96 )
+
+[node name="BlocoAmbiente46" parent="." index="34" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1696 )
+
+[node name="BlocoAmbiente62" parent="." index="35" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1440 )
+
+[node name="BlocoAmbiente10" parent="." index="36" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -544 )
+
+[node name="BlocoAmbiente55" parent="." index="37" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -288 )
+
+[node name="BlocoAmbiente30" parent="." index="38" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2080 )
+
+[node name="BlocoAmbiente81" parent="." index="39" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1824 )
+
+[node name="BlocoAmbiente17" parent="." index="40" instance=ExtResource( 1 )]
+
+position = Vector2( 288, 224 )
+
+[node name="BlocoAmbiente70" parent="." index="41" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 480 )
+
+[node name="BlocoAmbiente41" parent="." index="42" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1312 )
+
+[node name="BlocoAmbiente92" parent="." index="43" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1056 )
+
+[node name="BlocoAmbiente6" parent="." index="44" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -800 )
+
+[node name="BlocoAmbiente49" parent="." index="45" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -544 )
+
+[node name="BlocoAmbiente25" parent="." index="46" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2336 )
+
+[node name="BlocoAmbiente51" parent="." index="47" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2080 )
+
+[node name="BlocoAmbiente13" parent="." index="48" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -32 )
+
+[node name="BlocoAmbiente50" parent="." index="49" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 224 )
+
+[node name="BlocoAmbiente26" parent="." index="50" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1568 )
+
+[node name="BlocoAmbiente68" parent="." index="51" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1312 )
+
+[node name="BlocoAmbiente7" parent="." index="52" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -416 )
+
+[node name="BlocoAmbiente52" parent="." index="53" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -160 )
+
+[node name="BlocoAmbiente27" parent="." index="54" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1952 )
+
+[node name="BlocoAmbiente78" parent="." index="55" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1696 )
+
+[node name="BlocoAmbiente14" parent="." index="56" instance=ExtResource( 1 )]
+
+position = Vector2( 288, 352 )
+
+[node name="BlocoAmbiente58" parent="." index="57" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 608 )
+
+[node name="BlocoAmbiente33" parent="." index="58" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1184 )
+
+[node name="BlocoAmbiente84" parent="." index="59" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -928 )
+
+[node name="BlocoAmbiente2" parent="." index="60" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -992 )
+
+[node name="BlocoAmbiente69" parent="." index="61" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -736 )
+
+[node name="BlocoAmbiente40" parent="." index="62" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2528 )
+
+[node name="BlocoAmbiente100" parent="." index="63" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2528 )
+
+[node name="BlocoAmbiente104" parent="." index="64" instance=ExtResource( 1 )]
+
+position = Vector2( 928, 736 )
+
+[node name="BlocoAmbiente112" parent="." index="65" instance=ExtResource( 1 )]
+
+position = Vector2( 416, 736 )
+
+[node name="BlocoAmbiente108" parent="." index="66" instance=ExtResource( 1 )]
+
+position = Vector2( 672, 736 )
+
+[node name="BlocoAmbiente115" parent="." index="67" instance=ExtResource( 1 )]
+
+position = Vector2( 160, 736 )
+
+[node name="BlocoAmbiente119" parent="." index="68" instance=ExtResource( 1 )]
+
+position = Vector2( 160, 416 )
+
+[node name="BlocoAmbiente91" parent="." index="69" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2272 )
+
+[node name="BlocoAmbiente24" parent="." index="70" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -224 )
+
+[node name="BlocoAmbiente77" parent="." index="71" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 32 )
+
+[node name="BlocoAmbiente48" parent="." index="72" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1760 )
+
+[node name="BlocoAmbiente96" parent="." index="73" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1504 )
+
+[node name="BlocoAmbiente12" parent="." index="74" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -608 )
+
+[node name="BlocoAmbiente57" parent="." index="75" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -352 )
+
+[node name="BlocoAmbiente32" parent="." index="76" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2144 )
+
+[node name="BlocoAmbiente83" parent="." index="77" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1888 )
+
+[node name="BlocoAmbiente19" parent="." index="78" instance=ExtResource( 1 )]
+
+position = Vector2( 288, 160 )
+
+[node name="BlocoAmbiente72" parent="." index="79" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 416 )
+
+[node name="BlocoAmbiente43" parent="." index="80" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1376 )
+
+[node name="BlocoAmbiente94" parent="." index="81" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1120 )
+
+[node name="BlocoAmbiente4" parent="." index="82" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -864 )
+
+[node name="BlocoAmbiente65" parent="." index="83" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -608 )
+
+[node name="BlocoAmbiente37" parent="." index="84" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2400 )
+
+[node name="BlocoAmbiente97" parent="." index="85" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2400 )
+
+[node name="BlocoAmbiente103" parent="." index="86" instance=ExtResource( 1 )]
+
+position = Vector2( 800, 736 )
+
+[node name="BlocoAmbiente111" parent="." index="87" instance=ExtResource( 1 )]
+
+position = Vector2( 288, 736 )
+
+[node name="BlocoAmbiente107" parent="." index="88" instance=ExtResource( 1 )]
+
+position = Vector2( 544, 736 )
+
+[node name="BlocoAmbiente113" parent="." index="89" instance=ExtResource( 1 )]
+
+position = Vector2( 32, 736 )
+
+[node name="BlocoAmbiente117" parent="." index="90" instance=ExtResource( 1 )]
+
+position = Vector2( 32, 416 )
+
+[node name="BlocoAmbiente88" parent="." index="91" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2144 )
+
+[node name="BlocoAmbiente21" parent="." index="92" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -96 )
+
+[node name="BlocoAmbiente74" parent="." index="93" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 160 )
+
+[node name="BlocoAmbiente45" parent="." index="94" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1632 )
+
+[node name="BlocoAmbiente61" parent="." index="95" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1376 )
+
+[node name="BlocoAmbiente9" parent="." index="96" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -480 )
+
+[node name="BlocoAmbiente54" parent="." index="97" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -224 )
+
+[node name="BlocoAmbiente29" parent="." index="98" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2016 )
+
+[node name="BlocoAmbiente80" parent="." index="99" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1760 )
+
+[node name="BlocoAmbiente16" parent="." index="100" instance=ExtResource( 1 )]
+
+position = Vector2( 288, 288 )
+
+[node name="BlocoAmbiente60" parent="." index="101" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 544 )
+
+[node name="BlocoAmbiente35" parent="." index="102" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1248 )
+
+[node name="BlocoAmbiente86" parent="." index="103" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -992 )
+
+[node name="BlocoAmbiente5" parent="." index="104" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -736 )
+
+[node name="BlocoAmbiente64" parent="." index="105" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -480 )
+
+[node name="BlocoAmbiente36" parent="." index="106" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -2272 )
+
+[node name="BlocoAmbiente87" parent="." index="107" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -2016 )
+
+[node name="BlocoAmbiente20" parent="." index="108" instance=ExtResource( 1 )]
+
+position = Vector2( 288, 32 )
+
+[node name="BlocoAmbiente73" parent="." index="109" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 288 )
+
+[node name="BlocoAmbiente44" parent="." index="110" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1504 )
+
+[node name="BlocoAmbiente95" parent="." index="111" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1248 )
+
+[node name="BlocoAmbiente8" parent="." index="112" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -352 )
+
+[node name="BlocoAmbiente53" parent="." index="113" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -96 )
+
+[node name="BlocoAmbiente28" parent="." index="114" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1888 )
+
+[node name="BlocoAmbiente79" parent="." index="115" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -1632 )
+
+[node name="BlocoAmbiente15" parent="." index="116" instance=ExtResource( 1 )]
+
+position = Vector2( 288, 416 )
+
+[node name="BlocoAmbiente59" parent="." index="117" instance=ExtResource( 1 )]
+
+position = Vector2( 992, 672 )
+
+[node name="BlocoAmbiente34" parent="." index="118" instance=ExtResource( 1 )]
+
+position = Vector2( 288, -1120 )
+
+[node name="BlocoAmbiente85" parent="." index="119" instance=ExtResource( 1 )]
+
+position = Vector2( 992, -864 )
+
+[node name="TileMap" type="TileMap" parent="." index="120"]
+
+mode = 0
+tile_set = null
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray(  )
+
+
