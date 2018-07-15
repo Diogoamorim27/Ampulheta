@@ -71,16 +71,22 @@ func update(delta):
 		if walljump == 0:
 			motion.x = lerp(motion.x, 0, 0.05)
 	
-	if owner.get_node("RayCast2DLeft").is_colliding() and input_direction.y == 1 and walljump < 2:
-			print("wall jump to the rescue")
+	if owner.get_node("RayCast2DLeft").is_colliding():
+		owner.get_node("AnimationPlayer").play("WallJump")
+		owner.get_node("AnimationPlayer").queue("Jump")
+		if input_direction.y == 1 and walljump < 2:
 			motion.y = JUMP
 			motion.x = WALL_JUMP_RECOIL * delta
 			walljump += 1
-	elif owner.get_node("RayCast2DRight").is_colliding() and input_direction.y == 1 and walljump < 2:
-			print("wall jump to the rescue")
+	elif owner.get_node("RayCast2DRight").is_colliding():
+		owner.get_node("AnimationPlayer").play("WallJump")
+		owner.get_node("AnimationPlayer").queue("Jump")
+		if input_direction.y == 1 and walljump < 2:
 			motion.y = JUMP
 			motion.x = -WALL_JUMP_RECOIL * delta
 			walljump += 1
+		else:
+			motion.y += delta * GRAVITY
 			
 	else:
 		motion.y += delta * GRAVITY
