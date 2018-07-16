@@ -4,6 +4,7 @@ extends KinematicBody2D
 onready var idle = $States/Idle
 onready var move = $States/Move
 onready var jump = $States/Jump
+onready var walljump = $States/WallJump
 onready var die = $States/Die
 
 var state
@@ -28,6 +29,8 @@ func _change_state(next_state_name):
 		state = idle
 	elif state_name == "jump":
 		state = jump
+	elif state_name == "walljump":
+		state = walljump
 	elif state_name == "die":
 		state = die
 	state.enter()

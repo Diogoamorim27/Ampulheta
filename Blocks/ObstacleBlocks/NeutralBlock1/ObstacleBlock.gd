@@ -15,7 +15,9 @@ func _ready():
 	$Sprite.set_scale(SPRITE_SCALE)
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	var bodies = $Area2D.get_overlapping_bodies()
+	for body in bodies:
+		if body.name == "Player":
+			get_tree().quit()
+	pass

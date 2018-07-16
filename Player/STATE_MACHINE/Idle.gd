@@ -33,10 +33,15 @@ func _handle_input():
 func update(delta):
 	var input_direction = _handle_input()
 	if input_direction.y:
-		emit_signal("finished", "jump")
+		if owner.is_on_wall():
+			emit_signal("finished", "walljump")
+		else:
+			emit_signal("finished", "jump")
 	elif input_direction.x:
 		emit_signal("finished", "move")
-
+		
+	if !owner.is_on_floor(): 
+		emit_signal("finished", "jump")
 func _on_animation_finished(anim_name):
 	owner.get_node("AnimationPlayer").play("Idle")
 	return

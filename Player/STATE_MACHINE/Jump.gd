@@ -22,20 +22,22 @@ func _ready():
 	
 # Initialize the state. E.g. change the animation
 func enter():
+	#print("i jumped")
+	#motion.y = JUMP
 	owner.get_node("AnimationPlayer").play("Jump")
-	motion.y = JUMP
 	return
 
 # Clean up the state. Reinitialize values like a timer
 func exit():
 	motion = Vector2()
+	#walljump = 0
 	return
 
 func _handle_input():
 	var direction = Vector2()
-	if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_pressed("ui_accept") || Input.is_action_pressed("ui_up"):
 		direction.y = 1
-	elif Input.is_action_pressed("ui_right"):  
+	if Input.is_action_pressed("ui_right"):  
 		direction.x += 1
 	if Input.is_action_pressed("ui_left"): 
 		direction.x -= 1
@@ -45,10 +47,10 @@ func _handle_input():
 
 func update(delta):
 	var input_direction = _handle_input()
-	
 	if owner.is_on_floor():
-		walljump = 0
+		#walljump = 0
 		if input_direction.y:
+			#owner.get_node("AnimationPlayer").play("Jump")
 			motion.y = JUMP
 		else:
 			if input_direction.x:
@@ -56,40 +58,42 @@ func update(delta):
 			else:
 				emit_signal("finished", "idle")
 	
+	if !owner.is_on_floor() and owner.is_on_wall():
+		emit_signal("finished", "walljump")
+		
 	if input_direction.x > 0:
 		owner.get_node("Sprite").flip_h = true
 	elif input_direction.x < 0:
 		owner.get_node("Sprite").flip_h = false
 	
 	if input_direction.x:
-		if walljump == 0:
-			motion.x = input_direction.x * AIR_SPEED * delta
-		else: 
-			if (input_direction.x > 0 and motion.x < 0) or (input_direction.x > 0 and motion.x < 0):
-				motion.x = lerp(motion.x, 0, 0.05)
-	else:
-		if walljump == 0:
-			motion.x = lerp(motion.x, 0, 0.05)
+		#if walljump == 0:
+		motion.x = input_direction.x * AIR_SPEED * delta
+	else: 
+			#if (input_direction.x > 0 and motion.x < 0) or (input_direction.x > 0 and motion.x < 0):
+		motion.x = lerp(motion.x, 0, 0.05)
+	#else:
+	#	if walljump == 0:
+	#		motion.x = lerp(motion.x, 0, 0.05)
 	
-	if owner.get_node("RayCast2DLeft").is_colliding():
-		owner.get_node("AnimationPlayer").play("WallJump")
-		owner.get_node("AnimationPlayer").queue("Jump")
-		if input_direction.y == 1 and walljump < 2:
-			motion.y = JUMP
-			motion.x = WALL_JUMP_RECOIL * delta
-			walljump += 1
-	elif owner.get_node("RayCast2DRight").is_colliding():
-		owner.get_node("AnimationPlayer").play("WallJump")
-		owner.get_node("AnimationPlayer").queue("Jump")
-		if input_direction.y == 1 and walljump < 2:
-			motion.y = JUMP
-			motion.x = -WALL_JUMP_RECOIL * delta
-			walljump += 1
-		else:
-			motion.y += delta * GRAVITY
+	#if owner.get_node("RayCast2DLeft").is_colliding():
+	#	owner.get_node("AnimationPlayer").play("WallJump")
+	#	owner.get_node("AnimationPlayer").queue("Jump")
+	#	if input_direction.y == 1 and walljump < 2:
+	#		motion.y = JUMP
+	#		motion.x = WALL_JUMP_RECOIL * delta
+	#		walljump += 1
+	#elif owner.get_node("RayCast2DRight").is_colliding():
+	#	owner.get_node("AnimationPlayer").play("WallJump")
+	#	owner.get_node("AnimationPlayer").queue("Jump")
+	#	if input_direction.y == 1 and walljump < 2:
+	#		motion.y = JUMP
+	##		walljump += 1
+		#else:
+		#	motion.y += delta * GRAVITY
 			
-	else:
-		motion.y += delta * GRAVITY
+#	else:
+	motion.y += delta * GRAVITY
 	
 	owner.move_and_slide(motion, UP)
 	
@@ -98,4 +102,6 @@ func update(delta):
 func _on_animation_finished(anim_name):
 	if motion.y > 0:
 		owner.get_node("AnimationPlayer").play("Fall")
+	else:
+		owner.get_node("AnimationPlayer").play("Jump")
 	return

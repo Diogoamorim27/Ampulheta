@@ -7,7 +7,9 @@ extends Node
 
 const UP = Vector2(0, -1)
 const SPEED = 20000
+const GRAVITY = 1000
 
+var motion = Vector2()
 
 signal finished(next_state_name)
 
@@ -38,17 +40,31 @@ func _handle_input():
 	
 
 func update(delta):
+	if owner.is_on_floor():
+		motion.y = 0
 	var input_direction = _handle_input()
+
 	if !input_direction:
 		emit_signal("finished", "idle")
 	elif input_direction.y:
+		if owner.is_on_wall():
+			emit_signal("finished", "walljump")
+		else:
+			emit_signal("finished", "jump")
 		emit_signal("finished", "jump")
 	else:
 		if input_direction.x > 0:
 			owner.get_node("Sprite").flip_h = true
 		else:
 			owner.get_node("Sprite").flip_h = false
-		owner.move_and_slide(input_direction * delta * SPEED, UP) #, 5, 2)
+		
+	motion.x = input_direction.x * delta * SPEED
+	motion.y += delta * GRAVITY
+	if motion.y > (GRAVITY + 1)*delta:
+		emit_signal("finished", "jump")
+	owner.move_and_slide(motion, UP)	 #, 5, 2)
+	
+			#emit_signal("finished", "jump")
 	return
 
 func _on_animation_finished(anim_name):
