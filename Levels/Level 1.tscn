@@ -41,26 +41,21 @@ position = Vector2( 112, 3296 )
 
 [node name="Camera2D" parent="TileMap" index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 320, 3200 )
+position = Vector2( 320, 1696 )
+zoom = Vector2( 0.6, 4.8 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Player" parent="TileMap" index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 336, 3152 )
+position = Vector2( 464, 2208 )
 
 [node name="shapes" parent="TileMap" index="4" instance=ExtResource( 6 )]
 
-[node name="MovementTimer" type="Timer" parent="TileMap" index="5"]
+[node name="SpawnTimer" type="Timer" parent="TileMap" index="5"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 2.0
 one_shot = false
 autostart = true
-
-[node name="SpawnTimer" type="Timer" parent="TileMap" index="6"]
-
-process_mode = 1
-wait_time = 1.0
-one_shot = false
-autostart = false
 
 

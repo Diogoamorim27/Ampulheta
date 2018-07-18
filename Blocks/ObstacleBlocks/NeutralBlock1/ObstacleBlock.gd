@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends KinematicBody2D
 
 const TEXTURES = [
 "res://Blocks/Enviroment Blocks/rock_1_10.png",
@@ -15,9 +15,9 @@ func _ready():
 	$Sprite.set_scale(SPRITE_SCALE)
 	pass
 
-func _process(delta):
-	var bodies = $Area2D.get_overlapping_bodies()
-	for body in bodies:
-		if body.name == "Player":
-			get_tree().quit()
-	pass
+#func _process(delta):
+#	var bodies = $Area2D.get_overlapping_bodies()
+#	for body in bodies:
+#		if body.name == "Player":
+#			get_tree().quit()
+#	pass
