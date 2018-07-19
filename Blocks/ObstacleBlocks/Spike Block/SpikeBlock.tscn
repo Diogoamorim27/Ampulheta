@@ -28,7 +28,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 32, 32 )
 
-[node name="SpikeBlock" type="KinematicBody2D"]
+[node name="SpikeBlock" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -52,7 +52,7 @@ scale = Vector2( 0.301887, 0.301887 )
 texture = ExtResource( 1 )
 vframes = 3
 hframes = 4
-frame = 7
+frame = 4
 _sections_unfolded = [ "Animation" ]
 __meta__ = {
 "_edit_lock_": true

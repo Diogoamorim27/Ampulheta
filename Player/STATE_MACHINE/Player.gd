@@ -13,6 +13,7 @@ var state
 func _ready():
 	state = idle
 	state.connect("finished", self, "_change_state")
+	get_parent().get_node("Camera2D").connect("die", self, "_change_state")
 	state.enter()
 	pass
 

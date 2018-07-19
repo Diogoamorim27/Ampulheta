@@ -7,10 +7,7 @@ path="res://.import/rock_1_30.png-94f3f6021330ef35bc487547b6881e5c.stex"
 [deps]
 
 source_file="res://Blocks/ObstacleBlocks/NeutralBlock1/rock_1_30.png"
-source_md5="3063bf35a1d7cb6e1ea3bc7013d0ee87"
-
 dest_files=[ "res://.import/rock_1_30.png-94f3f6021330ef35bc487547b6881e5c.stex" ]
-dest_md5="a7d389d10c5990989261d9c0aa80a308"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/spike1.png-d7061ad9abf6c6aa35c16851ad3615a9.stex"
 [deps]
 
 source_file="res://Blocks/ObstacleBlocks/Spike Block/spike1.png"
-source_md5="89480e73d9d4e990250ffef790720c7e"
-
 dest_files=[ "res://.import/spike1.png-d7061ad9abf6c6aa35c16851ad3615a9.stex" ]
-dest_md5="56d484f0721189d05817c4c641ec7f63"
 
 [params]
 

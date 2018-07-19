@@ -24,7 +24,7 @@ func _ready():
 func enter():
 	#print("i jumped")
 	#motion.y = JUMP
-	owner.get_node("AnimationPlayer").play("Jump")
+	
 	return
 
 # Clean up the state. Reinitialize values like a timer
@@ -46,6 +46,12 @@ func _handle_input():
 	
 
 func update(delta):
+	motion.y += delta * GRAVITY
+	owner.move_and_slide(motion, UP)
+	
+	if motion.y > 0:
+		owner.get_node("AnimationPlayer").play("Jump")
+	
 	var input_direction = _handle_input()
 	if owner.is_on_floor():
 		#walljump = 0
@@ -72,30 +78,9 @@ func update(delta):
 	else: 
 			#if (input_direction.x > 0 and motion.x < 0) or (input_direction.x > 0 and motion.x < 0):
 		motion.x = lerp(motion.x, 0, 0.05)
-	#else:
-	#	if walljump == 0:
-	#		motion.x = lerp(motion.x, 0, 0.05)
-	
-	#if owner.get_node("RayCast2DLeft").is_colliding():
-	#	owner.get_node("AnimationPlayer").play("WallJump")
-	#	owner.get_node("AnimationPlayer").queue("Jump")
-	#	if input_direction.y == 1 and walljump < 2:
-	#		motion.y = JUMP
-	#		motion.x = WALL_JUMP_RECOIL * delta
-	#		walljump += 1
-	#elif owner.get_node("RayCast2DRight").is_colliding():
-	#	owner.get_node("AnimationPlayer").play("WallJump")
-	#	owner.get_node("AnimationPlayer").queue("Jump")
-	#	if input_direction.y == 1 and walljump < 2:
-	#		motion.y = JUMP
-	##		walljump += 1
-		#else:
-		#	motion.y += delta * GRAVITY
-			
-#	else:
-	motion.y += delta * GRAVITY
-	
-	owner.move_and_slide(motion, UP)
+
+	if owner.is_on_ceiling():
+		motion.y = 0
 	
 	return
 

@@ -11,7 +11,8 @@ const AIR_SPEED = 16000
 const GRAVITY = 1000
 const UP = Vector2(0, -1)
 
-var jump_counter = 0
+var right_jump_counter = 0
+var left_jump_counter = 0
 var motion = Vector2()
 
 signal finished(next_state_name)
@@ -27,6 +28,8 @@ func enter():
 
 # Clean up the state. Reinitialize values like a timer
 func exit():
+	right_jump_counter = 0
+	left_jump_counter = 0
 	return
 
 func _handle_input():
@@ -41,7 +44,6 @@ func _handle_input():
 	return direction
 
 func update(delta):
-	var jump_counter = 0
 	var input_direction = _handle_input()
 	if owner.is_on_wall():
 		owner.get_node("AnimationPlayer").play("WallJump")
@@ -50,13 +52,16 @@ func update(delta):
 		emit_signal("finished", "idle")
 	
 	if owner.get_node("RayCast2DLeft").is_colliding() and owner.is_on_wall():
-		if jump_counter < 2 and input_direction.y:
-			#print("halo")
+		if left_jump_counter < 2 and input_direction.y:
+			right_jump_counter = 0
+			left_jump_counter += 1
 			motion.y = JUMP
 		
 	if owner.get_node("RayCast2DRight").is_colliding() and owner.is_on_wall():
-		if jump_counter < 2 and input_direction.y:
-			#rint("holo")
+		if right_jump_counter < 2 and input_direction.y:
+			left_jump_counter = 0
+			right_jump_counter += 1
+			print(right_jump_counter)
 			motion.y = JUMP
 
 	if !owner.is_on_wall():

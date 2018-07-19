@@ -7,10 +7,7 @@ path="res://.import/rock_1_30.png-44ee6af1819086f9e8e10e38364e5229.stex"
 [deps]
 
 source_file="res://Blocks/Enviroment Blocks/rock_1_30.png"
-source_md5="3063bf35a1d7cb6e1ea3bc7013d0ee87"
-
 dest_files=[ "res://.import/rock_1_30.png-44ee6af1819086f9e8e10e38364e5229.stex" ]
-dest_md5="a7d389d10c5990989261d9c0aa80a308"
 
 [params]
 

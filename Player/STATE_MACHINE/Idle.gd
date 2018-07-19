@@ -31,6 +31,7 @@ func _handle_input():
 	
 
 func update(delta):
+	owner.move_and_slide(Vector2())
 	var input_direction = _handle_input()
 	if input_direction.y:
 		if owner.is_on_wall():
@@ -41,6 +42,7 @@ func update(delta):
 		emit_signal("finished", "move")
 		
 	if !owner.is_on_floor(): 
+		#print("not on floor")
 		emit_signal("finished", "jump")
 func _on_animation_finished(anim_name):
 	owner.get_node("AnimationPlayer").play("Idle")

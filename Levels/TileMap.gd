@@ -40,6 +40,8 @@ func _process(delta):
 	var player_tile = world_to_map($Player.position)
 	if grid[player_tile.x][player_tile.y] != null:
 		print("player is dead")
+		$Player/States/Die.enter()
+	
 	pass
 
 ## level contains info about special blocks and normal/special block ratios ##
@@ -66,7 +68,7 @@ func _on_spawn_timer_timeout():
 	piece_shape = $shapes.shapes[randi() % 19]
 	randomize()
 	spawn_spot = Vector2(randi() % 10, 0)
-	if $Camera2D.camera_movement:
+	if !$Camera2D.has_stopped:
 		spawn_spot.y = world_to_map($Camera2D.position).y - 8
 		if _spawn_piece(1, piece_shape, spawn_spot) == CELL_IS_OCCUPIED:
 			randomize()
