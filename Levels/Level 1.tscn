@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Levels/TileMap.gd" type="Script" id=1]
 [ext_resource path="res://Levels/Enviroment.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Blocks/Enviroment Blocks/EnviromentBlock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Blocks/ObstacleBlocks/Spike Block/SpikeBlock.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Piece Shapes/shapes.tscn" type="PackedScene" id=6]
@@ -35,26 +35,24 @@ _sections_unfolded = [ "Cell" ]
 
 position = Vector2( -320, 2624 )
 
-[node name="EnviromentBlock" parent="TileMap" index="1" instance=ExtResource( 3 )]
+[node name="SpikeBlock" parent="TileMap" index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 112, 3296 )
+position = Vector2( -32, 3104 )
 
 [node name="Camera2D" parent="TileMap" index="2" instance=ExtResource( 4 )]
 
-position = Vector2( 320, 1696 )
-zoom = Vector2( 0.6, 4.8 )
-_sections_unfolded = [ "Transform" ]
+position = Vector2( 256, 3024 )
 
 [node name="Player" parent="TileMap" index="3" instance=ExtResource( 5 )]
 
-position = Vector2( 464, 2208 )
+position = Vector2( 256, 3296 )
 
 [node name="shapes" parent="TileMap" index="4" instance=ExtResource( 6 )]
 
 [node name="SpawnTimer" type="Timer" parent="TileMap" index="5"]
 
 process_mode = 1
-wait_time = 2.0
+wait_time = 1.0
 one_shot = false
 autostart = true
 

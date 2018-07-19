@@ -29,7 +29,7 @@ func _physics_process(delta):
 			for child in get_children():
 				if child.name != "Timer":
 					grid.grid[grid.world_to_map(child.global_position).x][grid.world_to_map(child.global_position).y] = null
-					print(grid.grid[grid.world_to_map(child.global_position).x][grid.world_to_map(child.global_position).y])
+					#print(grid.grid[grid.world_to_map(child.global_position).x][grid.world_to_map(child.global_position).y])
 					if !grid.is_cell_vacant(grid.world_to_map(child.global_position) + DOWN):
 						can_move = 0
 
@@ -54,7 +54,7 @@ func _physics_process(delta):
 				for child in get_children():
 					if child.name != "Timer":
 						grid.grid[grid.world_to_map(child.global_position).x][grid.world_to_map(child.global_position).y] = type
-						print(grid.grid[grid.world_to_map(child.global_position).x][grid.world_to_map(child.global_position).y])
+						#print(grid.grid[grid.world_to_map(child.global_position).x][grid.world_to_map(child.global_position).y])
 				
 			move_and_collide(velocity)
 							

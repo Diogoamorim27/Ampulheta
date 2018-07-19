@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/spike1.png-d7061ad9abf6c6aa35c16851ad3615a9.stex"
+
+[deps]
+
+source_file="res://Blocks/ObstacleBlocks/Spike Block/spike1.png"
+source_md5="89480e73d9d4e990250ffef790720c7e"
+
+dest_files=[ "res://.import/spike1.png-d7061ad9abf6c6aa35c16851ad3615a9.stex" ]
+dest_md5="56d484f0721189d05817c4c641ec7f63"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -5,7 +5,6 @@ var tile_size  = self.cell_size
 var half_tile_size = self.cell_size/2
 var grid_size = Vector2(10, 52)
 var grid = []
-var piece_array = []
 
 
 var block_object = preload("res://Blocks/ObstacleBlocks/NeutralBlock1/ObstacleBlock1.tscn")
@@ -28,8 +27,6 @@ func _ready():
 		for y in range(grid_size.y):
 			grid[x].append(null)
 			
-	# TEST SPAWN A PIECE #
-	_spawn_piece(1, piece, Vector2(5, 45))
 	
 ## vai para script da peca ##
 func is_cell_vacant(pos):
@@ -40,6 +37,9 @@ func is_cell_vacant(pos):
 	return false
 	
 func _process(delta):
+	var player_tile = world_to_map($Player.position)
+	if grid[player_tile.x][player_tile.y] != null:
+		print("player is dead")
 	pass
 
 ## level contains info about special blocks and normal/special block ratios ##
@@ -58,34 +58,20 @@ func _spawn_piece(level, piece, pos):
 		new_piece.add_child(object)
 	#print(piece_array)
 	return OK
-		
-## vai entrar no script da peća ##
-#func _move_pieces(piece_array):
-#	for piece in piece_array:
-#		for block in piece:
-#			if !is_cell_vacant(world_to_map(block.position) + Vector2(0,1)):
-#				print("cell not vacant")
-#				#piece_array.remove(piece_array.find(piece))
-#				return
-#
-#				#print("piece removed")
-#			else:
-#				grid[world_to_map(block.position).x][world_to_map(block.position).y] = null
-#				block.position = block.position + map_to_world(Vector2(0,1))
-#				grid[world_to_map(block.position).x][world_to_map(block.position).y] = BLOCK
-#
+
 func _on_spawn_timer_timeout():
 	var piece_shape
 	var spawn_spot
 	randomize()
 	piece_shape = $shapes.shapes[randi() % 19]
 	randomize()
-	spawn_spot = Vector2(randi() % 10, 3)
-	if _spawn_piece(1, piece_shape, spawn_spot) == CELL_IS_OCCUPIED:
-		_on_spawn_timer_timeout()
+	spawn_spot = Vector2(randi() % 10, 0)
+	if $Camera2D.camera_movement:
+		spawn_spot.y = world_to_map($Camera2D.position).y - 8
+		if _spawn_piece(1, piece_shape, spawn_spot) == CELL_IS_OCCUPIED:
+			randomize()
+			spawn_spot.x = randi() % 10
+			_spawn_piece(1, piece_shape, spawn_spot)
 	pass
 		
-func _on_movement_timer_timeout():
-	#_move_pieces(piece_array)
-	pass
-	
+

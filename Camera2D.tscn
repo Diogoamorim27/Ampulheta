@@ -1,12 +1,20 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Levels/Camera2D.gd" type="Script" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 640, 176 )
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 32 )
 
 [node name="Camera2D" type="Camera2D"]
 
+position = Vector2( 640, 360 )
 anchor_mode = 1
 rotating = false
 current = true
@@ -16,7 +24,7 @@ limit_top = -10000000
 limit_right = 10000000
 limit_bottom = 10000000
 limit_smoothed = false
-drag_margin_h_enabled = false
+drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = false
 smoothing_speed = 5.0
@@ -29,10 +37,19 @@ drag_margin_bottom = 0.2
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+script = ExtResource( 1 )
 
-[node name="Area2D" type="Area2D" parent="." index="0"]
+[node name="Timer" type="Timer" parent="." index="0"]
 
-position = Vector2( -320, -3024 )
+process_mode = 1
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="MovementZone" type="Area2D" parent="." index="1"]
+
+position = Vector2( 0, -168 )
+scale = Vector2( 20, 6 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -40,15 +57,27 @@ linear_damp = 0.1
 angular_damp = 1.0
 audio_bus_override = false
 audio_bus_name = "Master"
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Transform" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovementZone" index="0"]
 
-position = Vector2( 0, -185.5 )
-scale = Vector2( 1, 1.03631 )
 shape = SubResource( 1 )
+
+[node name="DeathZone" type="Area2D" parent="." index="2"]
+
+position = Vector2( 3.05176e-05, 472 )
+scale = Vector2( 20, 1 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone" index="0"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 

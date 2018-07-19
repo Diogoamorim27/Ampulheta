@@ -67,10 +67,11 @@ var T1 = [Vector2(0,0),
 	Vector2(1,0),
 	Vector2(2,0),
 	Vector2(1,-1),]
-var T2 = [Vector2(0,0),
+var T2 = [Vector2(0,1),
+	Vector2(0,0),
 	Vector2(1,0),
-	Vector2(0,-1),
-	Vector2(0,1),]
+	Vector2(0,-1),]
+
 var T3 = [Vector2(1,1),
 	Vector2(0,0),
 	Vector2(1,0),
